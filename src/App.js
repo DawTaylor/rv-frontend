@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { Hero } from './components/Hero'
-import { DateChoser } from './components/DateChooser'
+import { DatePicker } from './components/DatePicker'
 import { HotelsList } from './components/HotelsList'
 
 export class App extends Component {
@@ -9,7 +9,7 @@ export class App extends Component {
     return (
       <div>
         <Hero />
-        <DateChoser />
+        <DatePicker />
         <HotelsList />
       </div>
     );
