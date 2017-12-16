@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { PriceSlider } from './PriceSlider'
-import { StarsFilter } from './StarsFilter'
+import { StarsFilter } from './RatingFilter'
 import { FilterWrapper } from './styled/HotelsFilterStyled'
 
 export class HotelsFilter extends Component {
