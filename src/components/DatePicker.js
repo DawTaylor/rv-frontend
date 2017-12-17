@@ -4,12 +4,14 @@ import { connect } from 'react-redux'
 import moment from 'moment'
 
 import { setDates } from '../modules/dates'
+import { searchHotels } from '../modules/hotels'
 
 import Calendar from './Calendar'
 import { DateWrapper, DateContainer, DateMessage, DateOptionsWrapper, DateOptionsSelected, DateOptionsButton, ActionsWrapper } from './styled/DatePickerStyled'
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  setDates
+  setDates,
+  searchHotels
 }, dispatch)
 
 const mapStateToProps = state => {
@@ -18,15 +20,6 @@ const mapStateToProps = state => {
 }
 
 class DatePicker extends Component {
-  constructor(props) {
-    super(props)
-
-    this.searchHotels = this.searchHotels.bind(this)
-  }
-
-  searchHotels() {
-  }
-
   formatDate(date) {
     return (
       <span>
@@ -55,7 +48,7 @@ class DatePicker extends Component {
                 <div className='title'>CHECK-OUT</div>
                 <div className='date'>{to !== '' ? this.formatDate(to) : 'Select check-out date'}</div>
               </DateOptionsSelected>
-              <DateOptionsButton onClick={this.searchHotels}>
+              <DateOptionsButton onClick={this.props.searchHotels}>
                 Search hotels
               </DateOptionsButton>
             </DateOptionsWrapper>
