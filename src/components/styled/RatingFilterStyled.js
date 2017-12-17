@@ -15,6 +15,7 @@ export const StarsFilterWrapper = styled.div`
       transition: all 0.2s;
       transform: rotate(0deg);
       background-image: url(${props => props.starOutlined});
+      cursor: pointer;
     }
 
     .star.filled {
