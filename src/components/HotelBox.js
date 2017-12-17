@@ -25,11 +25,12 @@ export class HotelBox extends Component {
 
   render() {
     const { showChart } = this.state
+    const { hotel } = this.props
     return (
       <HotelBoxWrapper>
         <div className='box'>
-          <HotelPicture />
-          {!showChart ? <HotelInfo toggleChart={this.toggleChart} /> : <HotelInfoChart toggleChart={this.toggleChart} />}
+          <HotelPicture image={hotel.image} />
+          {!showChart ? <HotelInfo hotel={hotel} toggleChart={this.toggleChart} /> : <HotelInfoChart priceHistory={hotel.price_history} toggleChart={this.toggleChart} />}
         </div>
       </HotelBoxWrapper>
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { HotelsFilter } from './HotelsFilter'
-import { HotelsResults } from './HotelsResults'
+import HotelsResults from './HotelsResults'
 import { HotelsWrapper, HotelsContentWrapper } from './styled/HotelsListStyled'
 
 export class HotelsList extends Component {

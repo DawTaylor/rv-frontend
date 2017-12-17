@@ -28,19 +28,20 @@ export class HotelInfo extends Component {
   }
 
   render() {
+    const { hotel } = this.props
     return (
       <HotelInfoWrapper>
         <HotelInfoLeft>
-          <HotelInfoRatings />
-          <h2 className='title'>Hyatt Place Charlotte Airport/Lake Pointe</h2>
-          <p className='description'>This hotel is located 7 miles from downtown Charlotte and 5 miles from Charlotte Douglas International Airport.</p>
+          <HotelInfoRatings rating={hotel.rate} />
+          <h2 className='title'>{hotel.name}</h2>
+          <p className='description'>{hotel.description}</p>
           <HotelButtons toggleChart={this.props.toggleChart} />
         </HotelInfoLeft>
         <HotelInfoDivider />
         <HotelInfoPrice>
           <div className='price'>
             <p className='label'>Total</p>
-            <p className='value'>$670</p>
+            <p className='value'>${hotel.price}</p>
           </div>
         </HotelInfoPrice>
       </HotelInfoWrapper>

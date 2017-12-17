@@ -18,15 +18,6 @@ export class HotelInfoChart extends Component {
         y: 0,
         x: 0
       },
-      data: [
-        {name: 'Jan', value: 240},
-        {name: 'Fev', value: 139},
-        {name: 'Mar', value: 980},
-        {name: 'Apr', value: 390},
-        {name: 'May', value: 480},
-        {name: 'Jun', value: 380},
-        {name: 'Jul', value: 430},
-      ]
     }
   }
 
@@ -41,6 +32,7 @@ export class HotelInfoChart extends Component {
   }
 
   render() {
+    const { priceHistory } = this.props
     return (
       <HotelInfoChartWrapper>
         <HotelInfoChartHeader>
@@ -50,8 +42,8 @@ export class HotelInfoChart extends Component {
             <span>Back to description</span>
           </a>
         </HotelInfoChartHeader>
-        <BarChart width={570} height={165} data={this.state.data}>
-          <XAxis axisLine={false} dataKey='name' tickLine={false} />
+        <BarChart width={570} height={165} data={priceHistory}>
+          <XAxis axisLine={false} dataKey='month' tickLine={false} />
           <Tooltip cursor={false} position={this.state.tooltipPos} content={<CustomTooltip />} />
           <Bar dataKey='value' shape={<CustomBarShape />} onMouseEnter={this.handleTooltip} />
         </BarChart>
