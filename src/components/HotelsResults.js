@@ -6,16 +6,17 @@ import { HotelBox } from './HotelBox'
 import { HotelsResultsWrapper } from './styled/HotelsResultsStyled'
 
 const mapStateToProps = state => {
-  const { hotelsList } = state.hotels
-  return { hotelsList }
+  const { hotelsList, ratings, range } = state.hotels
+  return { hotelsList, ratings, range }
 }
 
 class HotelsResults extends Component {
   render() {
-    const { hotelsList } = this.props
+    const { hotelsList, ratings, range } = this.props
+    const hotelsFiltered = hotelsList.filter(hotel => hotel.rate >= ratings && hotel.price >= range.start && hotel.price <= range.end)
     return (
       <HotelsResultsWrapper>
-        {hotelsList.map((hotel, index) => <HotelBox hotel={hotel} key={index} />)}
+        {hotelsFiltered.map((hotel, index) => <HotelBox hotel={hotel} key={index} />)}
       </HotelsResultsWrapper>
     )
   }
