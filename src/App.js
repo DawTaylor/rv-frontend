@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Hero } from './components/Hero'
 import DatePicker from './components/DatePicker'
 import HotelsLists from './components/HotelsList'
+import { Footer } from './components/Footer'
 
 const mapStateToProps = state => {
   const { hotelsList } = state.hotels
@@ -17,6 +18,7 @@ class App extends Component {
         <Hero />
         <DatePicker />
         {this.props.hotelsList.length > 0 ? <HotelsLists /> : null}
+        <Footer />
       </div>
     );
   }
