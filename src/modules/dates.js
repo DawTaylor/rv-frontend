@@ -19,7 +19,6 @@ export default (state = initialState, action) => {
 
 export const setDates = (state) => {
   return dispatch => {
-    console.log('dispatch', state)
     dispatch({
       type: SET_DATES,
       state
