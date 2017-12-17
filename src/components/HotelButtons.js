@@ -7,7 +7,7 @@ export class HotelButtons extends Component {
     return (
       <HotelButtonsWrapper>
         <HotelButtonBook>Book now</HotelButtonBook>
-        <HotelButtonPrice>Price history</HotelButtonPrice>
+        <HotelButtonPrice onClick={this.props.toggleChart}>Price history</HotelButtonPrice>
       </HotelButtonsWrapper>
     )
   }

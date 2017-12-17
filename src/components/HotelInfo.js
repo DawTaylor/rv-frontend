@@ -34,7 +34,7 @@ export class HotelInfo extends Component {
           <HotelInfoRatings />
           <h2 className='title'>Hyatt Place Charlotte Airport/Lake Pointe</h2>
           <p className='description'>This hotel is located 7 miles from downtown Charlotte and 5 miles from Charlotte Douglas International Airport.</p>
-          <HotelButtons />
+          <HotelButtons toggleChart={this.props.toggleChart} />
         </HotelInfoLeft>
         <HotelInfoDivider />
         <HotelInfoPrice>

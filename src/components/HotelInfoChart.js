@@ -45,7 +45,7 @@ export class HotelInfoChart extends Component {
       <HotelInfoChartWrapper>
         <HotelInfoChartHeader>
           <div className='title'>Price history for 2017</div>
-          <a className='back'>
+          <a className='back' onClick={this.props.toggleChart}>
             <img src={arrrowBack} alt='Back to description' />
             <span>Back to description</span>
           </a>

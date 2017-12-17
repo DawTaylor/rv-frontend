@@ -8,9 +8,9 @@ export class HotelsResults extends Component {
   render() {
     return (
       <HotelsResultsWrapper>
-        <HotelBox showChart={false} />
-        <HotelBox showChart={true} />
-        <HotelBox showChart={false} />
+        <HotelBox />
+        <HotelBox />
+        <HotelBox />
       </HotelsResultsWrapper>
     )
   }
