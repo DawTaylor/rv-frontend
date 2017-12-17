@@ -55,7 +55,7 @@ export const DateOptionsSelected = styled.div`
     color: #B5B5B5;
     margin-top: 10px;
   }
-  .date > span {
+  .date span.day {
     font-weight: bold;
   }
 `

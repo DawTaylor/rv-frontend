@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { Hero } from './components/Hero'
-import { DatePicker } from './components/DatePicker'
+import DatePicker from './components/DatePicker'
 import { HotelsList } from './components/HotelsList'
 
 export class App extends Component {
