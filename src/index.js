@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
+
+import { store } from './store'
 
 import 'normalize.css'
 
@@ -10,7 +13,9 @@ import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
   return (
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   )
 }
 
