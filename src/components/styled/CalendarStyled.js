@@ -46,7 +46,11 @@ export const CalendarRow = styled.div`
       background: #ffffff;
       color: #79BD1A;
       border-radius: 20px;
-      padding: 9px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
