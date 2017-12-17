@@ -1,4 +1,5 @@
 import axios from 'axios'
+import _ from 'lodash'
 
 const SEARCH_HOTELS = 'hotels/SEARCH_HOTELS'
 const SET_RATINGS = 'hotels/SET_RATINGS'
@@ -16,9 +17,14 @@ const initialState = {
 export default (state = initialState, action) => {
   switch(action.type) {
     case SEARCH_HOTELS:
+      const { price } = {..._.maxBy(action.state.hotelsList, (obj) => parseFloat(obj.price))}
       return {
         ...state,
-        ...action.state
+        ...action.state,
+        range: {
+          start: 0,
+          end: Math.ceil(price)
+        }
       }
     case SET_RATINGS:
       return {
@@ -60,7 +66,7 @@ export const setRatings = (state) => {
   return dispatch => {
     dispatch({
       type: SET_RATINGS,
-      state
+      state: { ratings : state}
     })
   }
 }
