@@ -5,10 +5,24 @@ export const HotelInfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   min-height: 238px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    flex-direction: column;
+  }
 `
 
 export const HotelInfoLeft = styled.div`
   width: 402px;
+
+  @media screen and (max-width: 1444px) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+    padding: 0 10px;
+  }
 
   .title {
     font-weight: bold;
@@ -21,6 +35,7 @@ export const HotelInfoLeft = styled.div`
     font-weight: normal;
     font-size: 15px;
     color: #b5b5b5;
+
   }
   .buttons-wrapper {
     margin-top: 45px;
@@ -32,6 +47,10 @@ export const HotelInfoDivider = styled.div`
   width: 1px;
   background: #D8D8D8;
   margin: 0 39px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const HotelInfoPrice = styled.div`
@@ -40,8 +59,22 @@ export const HotelInfoPrice = styled.div`
   justify-content: flex-end;
   align-items: center;
 
+  @media screen and (max-width: 1445px) {
+    width: 70px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
   .price {
     text-align: right;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
 
     .label {
       font-family: 'Heebo';
@@ -59,6 +92,10 @@ export const HotelInfoPrice = styled.div`
       letter-spacing: 3.41px;
       color: #79BD1A;
       margin: 0;
+
+      @media screen and (max-width: 1445px) {
+        font-size: 20px;
+      }
     }
   }
 `

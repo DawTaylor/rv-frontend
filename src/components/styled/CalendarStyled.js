@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const CalendarWrapper = styled.div`
+  max-width: 280px;
+  
   .divider {
     width: 280px;
     height: 2px;

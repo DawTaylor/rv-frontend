@@ -6,7 +6,18 @@ export const HotelsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(-50%);
+
+  @media screen and (min-width: 1445px) {
+    transform: translateY(-50%);
+  }
+
+  @media screen and (min-width: 1024px) {
+    transform: translateY(-20%);
+  }
+
+  @media screen and (max-width: 768px) {
+    transform: translateY(15%);
+  }
   
   .title {
     font-family: 'Montserrat';
@@ -28,4 +39,18 @@ export const HotelsContentWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 1280px;
+
+  @media screen and (max-width: 1445px) {
+    width: 1000px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 768px;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+  }
 `

@@ -2,7 +2,19 @@ import styled from 'styled-components'
 
 export const FilterWrapper = styled.div`
   width: 291px;
-  height: 200px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1455px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 800px;
+  }
+
+  @media screen and (max-wdith: 768px) {
+    width: 100%;
+  }
 
   .title {
     font-family: 'Montserrat';

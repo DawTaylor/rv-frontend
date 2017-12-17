@@ -5,7 +5,14 @@ export const DateWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50%);
+
+  @media screen and (min-width: 1024px) {
+    transform: translateY(-20%);
+  }
+
+  @media screen and (min-width: 1445px) {
+    transform: translateY(-50%);
+  }
 `
 
 export const DateContainer = styled.div`
@@ -17,6 +24,10 @@ export const DateContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const DateMessage = styled.h3`
@@ -25,11 +36,21 @@ export const DateMessage = styled.h3`
   font-weight: normal;
   letter-spacing: 2.5px;
   margin-top: 65px;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `
 
 export const ActionsWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const DateOptionsWrapper = styled.div`
